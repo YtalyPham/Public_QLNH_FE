@@ -1,0 +1,1168 @@
+:global {
+    @import 'node_modules/slick-carousel/slick/slick';
+}
+ * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body, html {
+    height:  100%;
+    width: 100%;
+}
+
+html {
+    font-family: "utmavo","Helvetica Neue",Arial,sans-serif;
+    font-weight: normal;
+}
+
+
+#main {
+
+}
+
+#header {
+    height: 105.7px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+}
+
+a {
+    text-decoration: none;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+}
+
+header.fixed {
+    position: fixed;
+    background: #FDFDFD;
+    padding: 19px 0;
+    border-bottom: solid 1px #eee;
+}
+
+.nav {
+    display: inline-block;
+}
+
+.nav, .subnav {
+    list-style-type: none;
+}
+
+
+
+.nav > li {
+    display: inline-block;
+}
+
+.nav li {
+    position: relative;
+}
+
+.nav > li > a {
+    color: #fff;
+    text-transform: uppercase;
+}
+.nav li a {
+
+    text-decoration: none;
+    line-height: 46.5px;
+    padding: 0 30px;
+    display: block;
+}
+
+.nav li:hover .subnav {
+    display: block;
+}
+
+.nav .subnav li:hover a, 
+.nav > li:hover > a {
+    color: #000;
+    background-color: #ccc;
+}
+
+
+.nav .subnav {
+    min-width: 160px;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+.nav .nav-arrow-down {
+    font-size: 12px;
+}
+
+.dactiec-btn a {
+    float: right;
+    padding: 0 21px;
+    text-decoration: none;
+    padding: 0px 30px;
+    display: block;
+    color: #fff;
+    line-height: 46.5px;
+    height: 46.5px;
+}
+.nav.right {
+    float: right;
+}
+
+.nav.left {
+    float: left;
+}
+
+header.fixed .logo {
+    width: 110px;
+    top: -11px;
+}
+.logo {
+    position: absolute;
+    top: 7px;
+    left: 0;
+    right: 0;
+    width: 280px;
+    margin: auto;
+    z-index: 10;
+}
+
+.logo img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+.menu {
+    float: left;
+    margin: 0;
+    padding: 0;
+}
+.menu.right {
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+
+.menuMain .menuBtn {
+    font-size: 0;
+    letter-spacing: 0;
+    float: left;
+    width: 30px;
+    height: 35px;
+    cursor: pointer;
+    margin-right: 20px;
+    position: relative;
+}
+.menu * {
+    list-style: none;
+}
+
+.menuMain .menuBtn:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    margin: auto;
+    background: #fff;
+}
+
+.menuMain .menuBtn:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 16px;
+    margin: auto;
+    border: none;
+    border-top: solid 2px #fff;
+    border-bottom: solid 2px #fff;
+}
+
+.menu>li {
+    float: left;
+    position: relative;
+}
+
+header.fixed .menu>li>a {
+    color: #64463C;
+}
+
+.menu>li>a {
+    display: block;
+    height: 35px;
+    line-height: 35px;
+    position: relative;
+    z-index: 2;
+    font-size: 14px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 500;
+    text-transform: uppercase;
+    font-family: "Elle Futura","Helvetica Neue",Arial,sans-serif;
+    text-shadow: 0.01em 0 0 #fff;
+    background-color: transparent;
+    padding: 0 15px;
+}
+
+.menu>li>ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    visibility: hidden;
+    min-width: 140px;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+.menu>li>ul>li:first-child {
+    padding-top: 10px;
+}
+
+.menu>li>ul>li:last-child {
+    padding-bottom: 10px;
+}
+
+.menu>li>ul>li>a {
+    display: block;
+    white-space: nowrap;
+    color: inherit;
+    line-height: 35px;
+    font-size: inherit;
+    text-decoration: none !important;
+    padding: 0 15px;
+    text-align: start;
+}
+
+.menu>li>ul>li {
+    z-index: 2;
+    position: relative;
+    margin: 0;
+    color: #fff;
+    font-weight: 500;
+    font-size: 14px;
+    padding: 0;
+    background: #E5CC5F;
+}
+
+.menu>li>ul>li:hover {
+    z-index: 3;
+}
+.menu>li>ul>li:hover>a {
+    color: #E5CC5F;
+    background: #fff;
+}
+
+
+.menu>li>ul:after {
+    content: "";
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    box-shadow: 1px 1px 5px rgb(0 0 0 / 20%);
+}
+
+.menu>li:hover>a {
+    color: #fff !important;
+    background-color: #E5CC5F;
+}
+
+.menu>li:hover>ul {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-icon {
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 46.5px;
+    padding: 0px 21px;
+    
+}
+
+.menu>li.active>a {
+    color: #fff !important;
+    background-color: #E5CC5F;
+}
+.menu>li.fix {
+    margin-left: 30px;
+}
+
+.login-button:hover {
+    background-color: #f44336;
+    cursor: pointer;
+}
+
+#header .search-icon {
+    color: #fff;
+    line-height: 46px;
+    font-size: 20px;
+}
+
+.nav .subnav a {
+    color: #000;
+    padding: 0 12px;
+    line-height: 38px;
+}
+
+.wrap {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+#slider {
+    position: relative;
+    padding-top: 50%;
+    background: url('../img/silder/toanha.jpg') top center / cover no-repeat
+}
+
+footer {
+    background-image: url('../img/footer/footerbackground.jpg');
+    position: relative;
+    padding: 38px 0 39px 0;
+    z-index: 1;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+footer:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    background: url("../img/footer/pattern.png") repeat center center rgba(0,0,0,0.4);
+    pointer-events: none;
+}
+
+.blackopacity {
+    background-color: ;
+}
+
+.footerWrap {
+    position: relative;
+    width: 1200px;
+    margin: 0 auto;
+    z-index: 2;
+}
+
+.footerInfo {
+    float: right;
+    width: 400px;
+    background: #64463C;
+    padding: 30px;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.footerInfo a {
+    color: #fff;
+}
+
+.follow {
+    margin: 17px auto;
+}
+
+.follow a+a {
+    margin-left: 35px;
+}
+
+.footerMap {
+    width: 600px;
+    float: left;
+    height: 120px;
+    padding-top: 30px;
+}
+
+.map {
+    width: 600px;
+}
+
+.clr {
+    clear: both;
+    display: table;
+    float: none;
+}
+
+.line {
+    display: block;
+    clear: both;
+    height: 1px;
+    background: rgba(255,255,255,0.2);
+    margin-bottom: 20px;
+}
+
+.fooNav {
+    float: left;
+}
+
+.fooNav a {
+    float: left;
+    color: #DEDEDE;
+    font-size: 15px;
+    font-family: "Elle Futura","Helvetica Neue",Arial,sans-serif;
+    text-decoration: none !important;
+    line-height: 1.4;
+    border-bottom: solid 1px transparent;
+}
+
+.fooNav a+a {
+    margin-left: 20px;
+}
+
+.copyright {
+    float: right;
+    color: #DEDEDE;
+    font-size: 15px;
+    font-family: "Elle Futura","Helvetica Neue",Arial,sans-serif;
+    text-decoration: none !important;
+    line-height: 1.4;
+}
+.copyright a {
+    color: inherit;
+    text-decoration: none !important;
+    border-bottom: solid 1px transparent;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+#toanha1 {
+    position: relative;
+    padding-top: 50%;
+    background: url('../img/silder/toanha.jpg') top center / cover no-repeat
+}
+
+#toanha2{
+    position: relative;
+    padding-top: 50%;
+    background: url('../img/silder/toanha2.jpg') top center / cover no-repeat
+}
+
+#toanha3 {
+    position: relative;
+    padding-top: 50%;
+    background: url('../img/silder/toanha3.jpg') top center / cover no-repeat
+}
+
+.banner {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 3;
+    background: rgba(0,0,0,0.5);
+}
+
+.pagewrap {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    color: #000;
+}
+
+.pagewrapinhd {
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    color: #000;
+}
+
+.slogan {
+    padding-bottom: 120px;
+}
+.slogan span{
+    display: block;
+    font-size: 25px;
+    font-family: "Montserrat","Helvetica Neue",Arial,sans-serif;
+    color: #d8c059;
+}
+
+.slogan:after {
+    content: "";
+    display: block;
+    width: 180px;
+    height: 1px;
+    background: #E5CC5F;
+    margin: 15px auto 0 auto;
+}
+
+.contentMain {
+    margin-bottom: 50px;
+}
+
+.contentOne {
+    background: #FAFAEB;
+    margin-bottom: 50px;
+    height: 450px;
+;
+}
+
+.contentOne .img {
+    float: right;
+    width: 50%;
+    position: relative;
+    z-index: 1;
+    margin-top: 25px;
+}
+
+.contentOne .pagewrap {
+    padding-bottom: 120px;
+}
+
+.thumb::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background: rgba(0,0,0,0.25);
+    opacity: 0;
+}
+
+.contentOne .img .thumb {
+    padding-bottom: 78.3333%;
+}
+
+.contentOne .textContent {
+    padding: 30px 15px 0 0;
+    float: left;
+    width: 50%;
+    padding: 50px 70px 0 70px;
+    text-align: center;
+}
+
+.contentOne .textContentTwo {
+    padding: 30px 15px 0 0;
+    float: right;
+    width: 50%;
+    padding: 50px 70px 0 70px;
+    text-align: center;
+}
+
+.contentOne .imgTwo {
+    float: left;
+    width: 50%;
+    position: relative;
+    z-index: 1;
+    margin-top: 25px;
+}
+
+
+.titBox {
+    display: block;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.titBox img {
+    display: block;
+    width: 50px;
+    height: auto;
+    margin: 0 auto 5px auto;
+}
+
+.titBox .tit {
+    display: table;
+    margin: 0 auto;
+    font-size: 25px;
+    line-height: 1.4;
+    color: #64463C;
+    font-family: "Elle Futura","Helvetica Neue",Arial,sans-serif;
+    text-transform: uppercase;
+    text-decoration: none !important;
+}
+
+.titBox .tit strong, .titBox .tit b {
+    color: #E5CC5F;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.titBox:after {
+    content: "";
+    display: block;
+    width: 180px;
+    height: 1px;
+    background: #E5CC5F;
+    margin: 15px auto 0 auto;
+}
+
+.contentOne p.ell {
+    text-align: justify;
+    text-align-last: center;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #666;
+    margin-bottom: 30px;
+    max-height: 85px;
+    overflow: hidden;
+}   
+
+p {
+    margin: 0 0 10.5px;
+}
+
+.btn-main {
+    background: #64463C;
+    color: #fff;
+}
+
+.btn {
+    padding: 15px 15px;
+    line-height: 40px;
+    min-width: 100px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: "utmavo","Helvetica Neue",Arial,sans-serif;
+    font-weight: 500;
+    min-width: 120px;
+    outline: none !important;
+    text-shadow: 0.01em 0 0 #fff;
+    
+}
+
+.date {
+    display: block;
+    font-size: 16px;
+    color: #E5CC5F;
+    text-shadow: 0.01em 0 #e5cc5f;
+    font-family: "Elle Futura","Helvetica Neue",Arial,sans-serif;
+    margin-bottom: 5px;
+    text-align: start;
+}
+
+.textContent h4 {
+    text-align: start;
+    color: #64463C;
+}
+
+.eventRCM .btn {
+    padding: 0px 15px;
+    float: left;
+    line-height: 40px;
+    min-width: 100px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-family: "utmavo","Helvetica Neue",Arial,sans-serif;
+    font-weight: 500;
+    min-width: 120px;
+    outline: none !important;
+    text-shadow: 0.01em 0 0 #fff;
+    
+}
+
+.eventRCM p.ell{
+    text-align-last: left;
+}
+
+.eventRCM .contentOne .img {
+    float: right;
+    width: 50%;
+    position: relative;
+    z-index: 2;
+    margin-top: 25px;
+}
+
+.ant-modal-title {
+    text-align: center;
+}
+
+#confirmSMS {
+    background-color: #bae7ff;
+}
+
+.bodysignup {
+    height: 100%;
+    padding-top: 50px;
+}
+
+.userinfo {
+    margin-top: 74px;
+}
+
+.capnhatform {
+    width: 100%;
+    margin-left: 0;
+}
+
+.odiemtichluy{
+    width: 90%;
+    height: 100%;
+    background-color: #bae7ff;
+    color: #000;
+    border-radius: 10px;
+
+}
+.txtodiemtichluy{
+    display: flex;
+    margin-top: 15px;
+    margin-left: 45%;
+    font-size: 35px;
+}
+.thongtinkhachhangshow{
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.canhgiuachu{
+    margin: 0 auto;
+}
+
+.avataruser {
+    width: 50%;
+    float: right;
+}
+
+.chitiet {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: start;
+    margin: 0 1;
+    margin-left: 20%;
+}
+
+.todam{
+    color: #000;
+    font-size: 30px;
+}
+
+.orderdetail {
+    font-size: 25px;
+    font-family: "Montserrat","Helvetica Neue",Arial,sans-serif;
+}
+
+.orderhistory {
+    font-size: 25px;
+    font-family: "Montserrat","Helvetica Neue",Arial,sans-serif;
+}
+
+.imgcrs {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.loginpage {
+    margin: 40px;
+}
+
+.bannerchucnang {
+    width: 1200px;
+    margin: 0 auto;
+    background-image: url(https://riversidepalace.vn/multidata/2-773.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 500px;
+    text-align: center;
+}
+
+.hinhbanner{
+    width: 1200px;
+    background-image: url(https://riversidepalace.vn/multidata/2-773.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    height: 200px;
+    margin: 0 auto;
+}
+
+.bannerchucnang::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.titlemenu {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 40px;
+    color: #fff;
+    margin: 70px 0 0 0;
+    font-weight: 400;
+    font-family: "Elle Futura","Helvetica Neue",Arial,sans-serif;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+
+}
+
+.contact {
+    padding-top: 80px;
+}
+
+.infolienhe {
+    text-align: left;
+    width: calc(50% - 30px);
+    float: right;
+    padding-top: 71px;
+    position: relative;
+    z-index: 2;
+
+}
+
+.landing {
+    font-size: 14px;
+    color: #646464;
+}
+
+.landing a {
+    color: #E5CC5F;
+}
+.landing table>tbody>tr>td{
+    border: none !important;
+    padding: 5px 0;
+    font-size: 14px;
+}
+
+h5 {
+    font-size: 18px;
+}
+
+.sub-color {
+    color: #64463C;
+    text-shadow: 0.01em 0 #64463c;
+}
+
+
+.guilienhe {
+    width: calc(50% - 30px);
+    float: left;
+    padding: 60px 40px 60px 40px;
+    background: #fff;
+    box-shadow: 0 5px 20px rgb(0 0 0 / 15%);
+    border-top: solid 5px #E5CC5F;
+    position: relative;
+    z-index: 2;
+}
+
+.buttonnew {
+    background: #64463C !important;
+    border-color: #64463C !important;
+}
+
+.buttonnew:hover {
+    background: #E5CC5F !important;
+    border-color: #E5CC5F !important;
+}
+
+.mapbox {
+    display: block;
+    margin-bottom: -50px;
+    position: relative;
+    z-index: 0;
+    margin-top: -130px;
+}
+
+#mapbox {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+.promotionTabs, .galTabs {
+    background: #FAFAEB;
+    width: 1200px;
+    margin: 0 auto;
+}
+.promotionTabs>.pagewrap, .galTabs>.pagewrap {
+    text-align: center;
+    padding: 20px 0 40px 0;
+    font-size: 0;
+    letter-spacing: 0;
+}
+
+#components-layout-demo-top-side-2 .logo {
+    float: left;
+    width: 120px;
+    height: 31px;
+    margin: 16px 24px 16px 0;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .ant-row-rtl #components-layout-demo-top-side-2 .logo {
+    float: right;
+    margin: 16px 0 16px 24px;
+  }
+  
+  .site-layout-background {
+    background: #fff;
+  }
+
+  .manager-container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 1rem;
+}
+
+#components-layout-demo-top-side-2 .logo {
+    float: left;
+    width: 120px;
+    height: 31px;
+    margin: 16px 24px 16px 0;
+    background: rgba(255, 255, 255, 0.3);
+  }
+  
+  .ant-row-rtl #components-layout-demo-top-side-2 .logo {
+    float: right;
+    margin: 16px 0 16px 24px;
+  }
+  
+  .site-layout-background {
+    background: #fff;
+  }
+
+  .ant-layout.ant-layout-has-sider {
+    padding-top: 64px;
+}
+
+.ant-carousel .slick-slider {
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.contentMain {
+    margin: 0 auto;
+    width: 1200px
+}
+
+.promotionTabs .item, .galTabs .item {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 30px;
+    color: #E5CC5F;
+    text-transform: uppercase;
+    font-family: "Elle Futura","Helvetica Neue",Arial,sans-serif;
+    line-height: 1.2;
+    text-decoration: none !important;
+    margin: 0;
+}
+
+.landing p+p {
+    margin-top: 25px;
+}
+
+.landing p, .landing ul, .landing ol {
+    margin: 0;
+    line-height: 1.5;
+    color: inherit;
+    font-family: "utmavo","Helvetica Neue",Arial,sans-serif;
+    text-align: justify;
+}
+
+.ant-image {
+    height: 90%;
+    width: 90%;
+}
+
+.ant-image-img {
+    height: inherit !important;
+}
+.custompaging {
+    width: 600px !important;
+}
+
+.demo-nav {
+    width: 1200px;
+    height: 30px;
+    margin-bottom: 16px;
+    line-height: 30px;
+    background: #f8f8f8;
+    margin: auto;
+  }
+  .demo-nav a {
+      float: left;
+    padding: 0 8px;
+    line-height: 30px;
+  }
+
+  .quangcaodaubep {
+      border: gray solid 3px;
+      padding: 20px;
+      border-radius: 20px;
+  }
+
+  .loginform {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    margin: -160px 0 0 -160px;
+    width: 320px;
+    height: 270px;
+    padding: 36px;
+    box-shadow: 0 0 100px rgb(0 0 0 / 10%);
+  }
+
+  .site-button-admin-wrapper {
+    padding: 26px 20px 20px;
+    background: rgb(190, 200, 200);
+  }
+  .btnadminload{
+    margin-left: 26px 20px 20px;
+  }
+  .site-button-admin-maincontent-wrapper{
+    padding: 20px 10px 10px 5px;
+    background: rgb(190, 200, 200);
+  }
+  .loginform button {
+    width: 100%;
+  }
+
+  .logoform {
+    text-align: center;
+    cursor: pointer;
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+#logoslogan {
+    vertical-align: text-bottom;
+    font-size: 16px;
+    text-transform: uppercase;
+    display: inline-block;
+    font-weight: 700;
+    color: #1890ff;
+    background-image: -webkit-gradient(linear, 37.219838% 34.532506%, 36.425669% 93.178216%, from(#29cdff), to(#0a60ff), color-stop(0.37, #148eff));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+.headeremployee {
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e7ecf0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1930;
+    height: 50px;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 20%);
+}
+
+.wrapperemployee{
+    background: #e7ecf0;
+    color: #667580;
+    font-size: 12px;
+    font-family: Tahoma !important;
+}
+
+.menuemployee ul li{
+    display: inline-block;
+    text-align: center;
+    padding:  13px;
+    position: relative;
+}
+
+.menuemployee ul li a{
+    color: #667580;
+}
+
+.boxInfo {
+    background-color: #fff;
+    min-height: 59px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px !important;
+    height: 340px;
+    overflow: hidden;
+}
+.boxChucNang {
+    background-color: #fff;
+    min-height: 59px;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px !important;
+    height: 175px;
+    overflow: hidden;
+    text-align: center !important;
+}
+.boxChucNang p {
+    text-align: center !important;
+}
+
+.thongtinnv span {
+    font-weight: bold;
+}
+
+@media print {
+    #printPageButton {
+      display: none;
+    }
+}
+
+
+.newscontent a {
+    display: block;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #64463C;
+    font-size: 20px;
+    font-family: "Elle Futura","Helvetica Neue",Arial,sans-serif;
+    margin-bottom: 20px;
+}
+
+.listNews .ant-list-lg .ant-list-item {
+    padding: 16px 0px !important;
+    flex-direction: row-reverse;
+}
+
+.listNews .ant-list-vertical .ant-list-item-extra {
+    margin-right: 40px;
+    margin-left: 0px;
+}
+
+.contenttintuc {
+    position: relative;
+    padding-top: 50px;
+    z-index: 1;
+
+    font-family: "utmavo","Helvetica Neue",Arial,sans-serif;
+    font-weight: normal;
+    font-size: 16px;
+}
+
+.contenttintuc a,h1,h2,h3,p {
+    text-align: justify;
+}
+
+.contenttintuc p+p {
+    margin-top: 25px;
+}
+
+.contenttintuc div+p {
+    margin-top: 25px;
+}
