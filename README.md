@@ -11,7 +11,7 @@
 <h2>II.Công nghệ sử dụng</h2>
 <h3>Ngôn ngữ: Reactjs(Dùng thư viện Ant Design)</h3>
 <h3>Cơ sở dữ liệu: MySQL (liên kết với CSDL cloud RDS)</h3>
-<h3>Deploy Server: Elastic Beantalk</h3>
+<h3>Deploy Server: S3 Bucket (AWS)</h3>
 <h3>Link Github BE: https://github.com/YtalyPham/Public_QLNH_BE</h3>
 <h3>Link Demo: https://youtu.be/peu56EkiuKA</h3>
 <h3>Link Product: http://qlnhfe.s3-website-ap-southeast-1.amazonaws.com/</h3>
