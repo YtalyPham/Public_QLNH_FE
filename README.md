@@ -14,7 +14,6 @@
 <h3>Deploy Server: S3 Bucket (AWS)</h3>
 <h3>Link Github BE: https://github.com/YtalyPham/Public_QLNH_BE</h3>
 <h3>Link Demo: https://youtu.be/peu56EkiuKA</h3>
-<h3>Link Product: http://qlnhfe.s3-website-ap-southeast-1.amazonaws.com/</h3>
 <h2>III.Sơ đồ</h2>
 <h3>1.Sơ đồ Usecase</h3>
 <p align="center"><img src="images/usecase.jpg"/></p>
